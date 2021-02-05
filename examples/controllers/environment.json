@@ -1,0 +1,5 @@
+{
+    "environment":"unclass",
+    "displayText":"Unclassified U.S. Only / FOUO",
+    "options": ["unclass","classified"]
+}

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script defer src="../src/classification_header_just_data.js" async></script>
+    <style>
+        /*css won't work here without some extra work using ::host or ::slot
+        https://developers.google.com/web/fundamentals/web-components/shadowdom#stylehooks
+        */
+    </style>
+</head>
+
+<body>
+    <header-classification url="/examples/controllers/environment.json" classifiedClass="classified" unclassClass="unclass">
+        <template>
+            <style>
+                /*this could be referenced via a link too, combine with caching with service workers*/
+                .classification_header {
+                    display: block;
+                    line-height: 1.5;
+                    position: fixed;
+                    color: white;
+                    font-size: 12pt;
+                    font-family: arial;
+                    text-align: center;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .classified {
+                    background-color: red;
+                }
+
+                .unclass {
+                    background-color: green;
+                }
+            </style>
+            <div class='classification_header' id="classification_content"></div>
+        </template>
+    </header-classification>
+    <br/>
+    <br/>
+    <p>Hello</p>
+</body>
+
+</html>
